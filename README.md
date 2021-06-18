@@ -25,7 +25,8 @@ Running a desired SQL query for a list of IPs for some days.
 ### STEP 0:  install required packages
 
 - Type this into Spyder IPython Console:
-  - !pip install netaddr
+  - import sys
+    !{sys.executable} -m pip install netaddr
 
 ### **STEP 1:** Make the SQL file contain your IP list 
 
