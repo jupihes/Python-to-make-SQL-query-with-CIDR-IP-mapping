@@ -1,5 +1,9 @@
 """
-@author: Hossein Khayami
+@author: Hossein Khayami @https://github.com/h-khayami
+@https://github.com/jupihes Hesam Mohammad Hosseini supported to revise and add all sections to make one unified program
+
+"CIDR Notation to Regex Tool" http://d.xenowire.net/cidr2regex.php used and few bugs on ??? modified.
+
 """
 import re
 from netaddr import *
