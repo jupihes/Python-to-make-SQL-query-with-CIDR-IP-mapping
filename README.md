@@ -20,13 +20,13 @@ Running a desired SQL query for a list of IPs for some days.
 ![Schematic](https://github.com/jupihes/Python-to-make-SQL-query-with-CIDR-IP-mapping/blob/main/schematic%20of%20workflow.jpg)
 
 ## Steps
-### STEP 0 ** install required packages
+### STEP 0 : install required packages
 
 ·    Type this into Spyder IPython Console:
 
 - !pip install netaddr
 
-### **STEP 1:** Make the SQL file contain your IP list 
+### STEP 1: Make the SQL file contain your IP list 
 
 ·    Copy the list of your desired IP list (with or without subnet mask. Ex: /24) to *“IP_Net_pool.xlsx”*
 
@@ -57,7 +57,7 @@ group by server_ip
 
  
 
-### **STEP 2:** Run SQL using python on the server
+### STEP 2: Run SQL using python on the server
 
 ·    Copy generated SQL file to the server on below address on server:
 
