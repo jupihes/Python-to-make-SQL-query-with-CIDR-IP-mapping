@@ -1,7 +1,8 @@
 # Python-to-make-SQL-query-with-CIDR-IP-mapping
 
-@author: Hossein Khayami @https://github.com/h-khayami
-@https://github.com/jupihes Hesam Mohammad Hosseini supported to revise and add all sections to make one unified program
+Authors: 
+Hossein Khayami @https://github.com/h-khayami main contributer <br>
+Hesam Mohammad Hosseini@https://github.com/jupihes supported to revise and add all sections to make one unified program <br>
 
 ## Background
 
