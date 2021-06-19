@@ -42,7 +42,7 @@ Running a desired SQL query for a list of IPs for some days.
 
 ```sql
 SELECT server_ip, sum(L4_UL_THROUGHPUT)
-from ps.detail_ufdr_fileaccess_[?D?] 
+from daily_table_[?D?] 
 where server_ip in ([?IP?])
 group by server_ip
 ```
