@@ -7,7 +7,7 @@ Hesam Mohammad Hosseini@https://github.com/jupihes supported to revise and add a
 ## Background
 
 
-"CIDR Notation to Regex Tool" http://d.xenowire.net/cidr2regex.php used and few bugs on ??? modified.
+"CIDR Notation to Regex Tool" http://d.xenowire.net/cidr2regex.php used and [few bugs have been modified](https://gist.github.com/h-khayami/5454181fa7a6371b28c58802f17f5025#gistcomment-3779228).
 
 
 # Python to make SQL query with CIDR IP mapping
@@ -41,8 +41,15 @@ Running a desired SQL query for a list of IPs for some days.
     Example
 
 ```sql
-SELECT server_ip, sum(L4_UL_THROUGHPUT)
-from daily_table_[?D?] 
+SELECT server_ip, sum(payload)
+from daily_table1_[?D?] 
+where server_ip in ([?IP?])
+group by server_ip
+
+union all 
+
+SELECT server_ip, sum(payload)
+from daily_table2_[?D?] 
 where server_ip in ([?IP?])
 group by server_ip
 ```
@@ -55,12 +62,13 @@ group by server_ip
   - Note: This python script will remove duplicated addresses, sort, and summarize the IP list
 
 - Now a SQL file generated that contains the provided list of IPs instead of [?IP?]
+- This helps especially for queries that they contain conditions on IPs multiple times throughout the query. Or in cases that you would like to repeat it with different set of IPs.
 
  
 
 ### **STEP 2:** Run SQL using python on the server
 
-- Copy generated SQL file to the server on below address on server:
+- Copy generated SQL file to the server (where you have access to your database) on below address:
 
 D:\\...\carbon
 
